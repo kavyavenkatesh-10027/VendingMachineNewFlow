@@ -1,6 +1,5 @@
 package model
 
-import exception.UnknownEntityException
 import model.enum.*
 import java.math.BigDecimal
 import java.time.LocalDate
@@ -33,7 +32,7 @@ class Food(
     //Why? For encapsulating and restricting modification of the collection. Read-only
     fun getIngredients(): List<String> {
         return ingredients.toList()
-    }
+    }//todo must be able to print ingredients
 
     init {
         require(ingredients.isNotEmpty()) { "Ingredients must be provided"}
@@ -42,19 +41,21 @@ class Food(
         //Runs along with primary const
     }
 
+    /***
     //Why? Safe-adding
-    fun addIngredient(ingredient: String) {
-        require(ingredient.isNotBlank()) { "A product cannot have a blank ingredient"}
-        ingredients.add(ingredient)
-    }
+//    fun addIngredient(ingredient: String) {
+//        require(ingredient.isNotBlank()) { "A product cannot have a blank ingredient"}
+//        ingredients.add(ingredient)
+//    }
 
     //Why? Safe-removing
-    fun removeIngredient(ingredient: String) {
-        if (ingredient !in ingredients) {
-            throw UnknownEntityException(ingredient, "Ingredient" )
-        }
-        ingredients.remove(ingredient)
-    }
+//    fun removeIngredient(ingredient: String) {
+//        if (ingredient !in ingredients) {
+//            throw UnknownEntityException(ingredient, "Ingredient" )
+//        }
+//        ingredients.remove(ingredient)
+//    }
+    **/
 
     override fun toString(): String =
         super.toString() + "\n" +
