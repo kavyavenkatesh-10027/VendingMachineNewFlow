@@ -55,7 +55,7 @@ class ConsumerUI() : Interactable {
     }
 
     //Why? UI and presentation, along with forward calls, along with forward calls
-    private fun printAvailableProducts(vmId: String) {//todo
+    private fun printAvailableProducts(vmId: String) {//todo unique properties
         val products = ConsumerController.viewAvailableProducts(vmId)
         val category = AdminController.getCategoryByVendingMachineId(vmId)
         println("\n=====================================")
@@ -157,7 +157,7 @@ class ConsumerUI() : Interactable {
         println("=====================================")
         println("  Purchase ID : ${purchase.purchaseId}")
         println("  Time        : ${purchase.purchaseTime}")
-        println("  Items       : ${purchase.getQuantityOfProductsPurchased()}}")//todo
+        println("  Items       : ${purchase.getQuantityOfProductsPurchased()}}")//todo, custom print, no {}
         println("  Total       : Rs.${purchase.totalAmount}")
         println("  Paid        : Rs.${purchase.moneyPaidByCustomer}")
         println("  Change      : Rs.${purchase.moneyToBeReturnedByVendingMachine}")
