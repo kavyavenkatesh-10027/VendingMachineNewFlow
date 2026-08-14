@@ -41,7 +41,7 @@ object FoodService : BaseProductService<Food>() {
     override fun getById(productId: String): Food = FoodRepository.findById(productId)
 
     //Why? To get all the food specific product, very important for category wise enu showcase
-    override fun getAllProductsInThisCategory(): Set<Food> = FoodRepository.findAll()
+    override fun getAllProducts(): Set<Food> = FoodRepository.findAll()
 
     //Why? For verification and completion of the chain without inconsistency. (Slot contains food, to maintain Slot-Food relationship)
 //    fun removeFood(foodId: String) {

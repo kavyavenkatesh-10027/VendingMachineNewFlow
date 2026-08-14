@@ -11,7 +11,7 @@ abstract class User(
 ) {
 
     init {
-        require(!name.isBlank()) { "Name cannot be empty" }
+        require(name.isNotBlank()) { "Name cannot be empty" }
         require(!dob.isAfter(LocalDate.now())) {"Date of Birth must be on or before the current date" }
     }
 

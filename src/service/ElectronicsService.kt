@@ -40,7 +40,7 @@ object ElectronicsService : BaseProductService<Electronics>() {
     override fun getById(productId: String): Electronics = ElectronicsRepository.findById(productId)
 
     //Why? For consistency and maintaining Controller->Service->Repository flow
-    override fun getAllProductsInThisCategory(): Set<Electronics> = ElectronicsRepository.findAll()
+    override fun getAllProducts(): Set<Electronics> = ElectronicsRepository.findAll()
 
         //Why? For verification and completion of the chain without inconsistency.
 //    fun removeElectronics(electronicsId: String) {

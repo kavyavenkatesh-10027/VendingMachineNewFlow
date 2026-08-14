@@ -7,7 +7,7 @@ abstract class BaseProductService<T : Product> {
 
     abstract fun getById(productId : String) : T
 
-    abstract fun getAllProductsInThisCategory(): Set<T>
+    abstract fun getAllProducts(): Set<T>
 
     companion object{//similar to static in java. When the method belongs to the class instead of the instance
         fun getProductById(productId: String) : Product{

@@ -270,7 +270,7 @@ object AdminController : BaseController() {
 
     //Why? Backs the "view all products" / "pick a product" UI flows for any category, generically.
     fun getAllProductsOfCategory(category: ProductCategory): Set<Product> = when (category) {
-        ProductCategory.FOOD -> FoodService.getAllProductsInThisCategory()
-        ProductCategory.ELECTRONIC -> ElectronicsService.getAllProductsInThisCategory()
+        ProductCategory.FOOD -> FoodService.getAllProducts()
+        ProductCategory.ELECTRONIC -> ElectronicsService.getAllProducts()
     }
 }
