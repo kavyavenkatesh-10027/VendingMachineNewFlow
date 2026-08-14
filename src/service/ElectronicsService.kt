@@ -42,10 +42,10 @@ object ElectronicsService : BaseProductService<Electronics>() {
     //Why? For consistency and maintaining Controller->Service->Repository flow
     override fun getAllProductsInThisCategory(): Set<Electronics> = ElectronicsRepository.findAll()
 
-    //Why? For verification and completion of the chain without inconsistency.
-    fun removeElectronics(electronicsId: String) {
-        getById(electronicsId)  // verify existence
-        ElectronicsRepository.removeById(electronicsId)
-        ProductRepository.removeById(electronicsId)
-    }
+        //Why? For verification and completion of the chain without inconsistency.
+//    fun removeElectronics(electronicsId: String) {
+//        getById(electronicsId)  // verify existence
+//        ElectronicsRepository.removeById(electronicsId)
+//        ProductRepository.removeById(electronicsId)
+//    }
 }
