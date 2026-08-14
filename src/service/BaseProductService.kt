@@ -9,6 +9,7 @@ abstract class BaseProductService<T : Product> {
 
     abstract fun getAllProducts(): Set<T>
 
+    //This functionality belongs to class, and cannot be called from outside without BaseProductService. Abstract refuses instantiation. Hence companion object.
     companion object{//similar to static in java. When the method belongs to the class instead of the instance
         fun getProductById(productId: String) : Product{
             return ProductRepository.findById(productId)
