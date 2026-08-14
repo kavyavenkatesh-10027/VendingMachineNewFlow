@@ -2,7 +2,6 @@ package service
 
 import model.Product
 import repository.ProductRepository
-import java.math.BigDecimal
 
 abstract class BaseProductService<T : Product> {
 
@@ -16,28 +15,28 @@ abstract class BaseProductService<T : Product> {
         }
     }
     
-    //Why? For completing the chain
-    fun editDescription(productId: String, newDescription: String) {
-        getProductById(productId).description = newDescription
-    }
-
-    //Why? For completing the chain
-    fun editName(productId: String, newName: String) {
-        getProductById(productId).productName = newName
-    }
-
-    //Why? For completing the chain
-    fun editBrand(productId: String, newBrand: String) {
-        getProductById(productId).brand = newBrand
-    }
-
-    //Why? For completing the chain
-    fun editPrice(productId: String, newPrice: BigDecimal) {
-        getProductById(productId).price = newPrice
-    }
-
-    //Why? For completing the chain
-    fun editWarning(productId: String, newWarning: String?) {
-        getProductById(productId).warning = newWarning
-    }
+//    //Why? For completing the chain
+//    fun editDescription(productId: String, newDescription: String) {
+//        getProductById(productId).description = newDescription
+//    }
+//
+//    //Why? For completing the chain
+//    fun editName(productId: String, newName: String) {
+//        getProductById(productId).productName = newName
+//    }
+//
+//    //Why? For completing the chain
+//    fun editBrand(productId: String, newBrand: String) {
+//        getProductById(productId).brand = newBrand
+//    }
+//
+//    //Why? For completing the chain
+//    fun editPrice(productId: String, newPrice: BigDecimal) {
+//        getProductById(productId).price = newPrice
+//    }
+//
+//    //Why? For completing the chain
+//    fun editWarning(productId: String, newWarning: String?) {
+//        getProductById(productId).warning = newWarning
+//    }
 }
