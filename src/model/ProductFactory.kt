@@ -30,8 +30,7 @@ object ProductFactory {
         ingredients = ingredients.toMutableList(),
         expiryDate = expiryDate,
         foodType = foodType,
-        warning = warning,
-        category = ProductCategory.FOOD
+        warning = warning
     )
 
     fun createElectronics(
@@ -55,9 +54,8 @@ object ProductFactory {
         warrantyMonths = warrantyMonths,
         batteryPowered = batteryPowered,
         electronicsType = electronicsType,
-        warning = warning,
-        category = ProductCategory.ELECTRONIC
+        warning = warning
     )
 
-    // Add createStationery(...), createXyz(...), etc. here as new categories are introduced.
+    // For future enhancements, can add createStationery(...), etc. here as new categories.
 }
