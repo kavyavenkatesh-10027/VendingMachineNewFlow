@@ -15,8 +15,7 @@ class Electronics(
     val warrantyMonths: Int,
     val batteryPowered: Boolean,
     val electronicsType: ElectronicsType,
-    warning: String? = null,
-    category: ProductCategory
+    warning: String? = null
 ) : Product(
     productName = productName,
     brand = brand,
@@ -25,7 +24,7 @@ class Electronics(
     manufacturingLocation = manufacturingLocation,
     manufacturingDate = manufacturingDate,
     warning = warning,
-    productCategory = category
+    productCategory = ProductCategory.ELECTRONIC
 ) {
 
     init {

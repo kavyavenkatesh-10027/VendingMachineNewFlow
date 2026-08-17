@@ -16,7 +16,6 @@ class Food(
     private val ingredients: MutableList<String>,
     val expiryDate: LocalDate,
     val foodType: FoodType,
-    category: ProductCategory,
     warning: String? = null
 ) : Product(
     productName = productName,
@@ -25,7 +24,7 @@ class Food(
     price = price,
     manufacturingLocation = manufacturingLocation,
     manufacturingDate = manufacturingDate,
-    productCategory = category,
+    productCategory = ProductCategory.FOOD,
     warning = warning
 ) {
 

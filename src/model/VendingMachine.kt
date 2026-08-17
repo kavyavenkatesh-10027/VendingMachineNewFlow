@@ -1,7 +1,6 @@
 package model
 
 import exception.SlotVendingMachineMismatchException
-import exception.UnknownEntityException
 import generator.IDGenerator
 import model.enum.*
 import java.time.LocalDate
