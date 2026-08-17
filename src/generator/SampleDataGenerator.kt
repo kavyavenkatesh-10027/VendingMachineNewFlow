@@ -30,8 +30,7 @@ fun load() {
         vegOrNonVeg = VegNonVeg.VEG,
         ingredients = mutableListOf("Potato", "Vegetable Oil", "Salt"),
         expiryDate = LocalDate.now().plusMonths(5),
-        foodType = FoodType.CHIP,
-        category = ProductCategory.FOOD
+        foodType = FoodType.CHIP
     )
 
     val bisleri = Food(
@@ -44,8 +43,7 @@ fun load() {
             vegOrNonVeg = VegNonVeg.VEGAN,
             ingredients = mutableListOf("Purified Water"),
             expiryDate = LocalDate.now().plusYears(1),
-            foodType = FoodType.WATER_BOTTLE,
-            category = ProductCategory.FOOD
+            foodType = FoodType.WATER_BOTTLE
     )
 
     val cocaCola = Food(
@@ -59,8 +57,7 @@ fun load() {
             ingredients = mutableListOf("Carbonated Water", "Sugar", "Caramel Color", "Caffeine"),
             expiryDate = LocalDate.now().plusMonths(8),
             foodType = FoodType.COLD_DRINK,
-            warning = "Contains caffeine",
-            category = ProductCategory.FOOD
+            warning = "Contains caffeine"
     )
 
     val dairyMilk = Food(
@@ -74,8 +71,7 @@ fun load() {
             ingredients = mutableListOf("Milk Solids", "Sugar", "Cocoa Butter", "Cocoa Solids"),
             expiryDate = LocalDate.now().plusMonths(9),
             foodType = FoodType.CHOCOLATE_BAR,
-            warning = "Contains milk",
-            category = ProductCategory.FOOD
+            warning = "Contains milk"
     )
 
     val monsterEnergy = Food(
@@ -89,8 +85,7 @@ fun load() {
             ingredients = mutableListOf("Carbonated Water", "Sugar", "Taurine", "Caffeine", "B-Vitamins"),
             expiryDate = LocalDate.now().plusMonths(6),
             foodType = FoodType.ENERGY_DRINK,
-            warning = "High caffeine content; not recommended for children",
-            category = ProductCategory.FOOD
+            warning = "High caffeine content; not recommended for children"
     )
 
     listOf(lays, bisleri, cocaCola, dairyMilk, monsterEnergy).forEach {
